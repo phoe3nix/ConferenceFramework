@@ -8,12 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		CBD9ABB52222E128002587FE /* ConferenceFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = CBD9ABB32222E128002587FE /* ConferenceFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBD9ABBE2222E1BB002587FE /* MyClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD9ABBD2222E1BB002587FE /* MyClass.swift */; };
+		CBD9ABC12222E1CB002587FE /* ExampleClass.h in Headers */ = {isa = PBXBuildFile; fileRef = CBD9ABBF2222E1CB002587FE /* ExampleClass.h */; };
+		CBD9ABC22222E1CB002587FE /* ExampleClass.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD9ABC02222E1CB002587FE /* ExampleClass.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CBD9ABB02222E128002587FE /* ConferenceFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ConferenceFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBD9ABB32222E128002587FE /* ConferenceFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConferenceFramework.h; sourceTree = "<group>"; };
 		CBD9ABB42222E128002587FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBD9ABBD2222E1BB002587FE /* MyClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClass.swift; sourceTree = "<group>"; };
+		CBD9ABBF2222E1CB002587FE /* ExampleClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExampleClass.h; sourceTree = "<group>"; };
+		CBD9ABC02222E1CB002587FE /* ExampleClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleClass.m; sourceTree = "<group>"; };
+		CBD9ABC32222E6B1002587FE /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,8 +53,12 @@
 		CBD9ABB22222E128002587FE /* ConferenceFramework */ = {
 			isa = PBXGroup;
 			children = (
+				CBD9ABC32222E6B1002587FE /* module.modulemap */,
 				CBD9ABB32222E128002587FE /* ConferenceFramework.h */,
 				CBD9ABB42222E128002587FE /* Info.plist */,
+				CBD9ABBD2222E1BB002587FE /* MyClass.swift */,
+				CBD9ABBF2222E1CB002587FE /* ExampleClass.h */,
+				CBD9ABC02222E1CB002587FE /* ExampleClass.m */,
 			);
 			path = ConferenceFramework;
 			sourceTree = "<group>";
@@ -59,6 +70,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBD9ABC12222E1CB002587FE /* ExampleClass.h in Headers */,
 				CBD9ABB52222E128002587FE /* ConferenceFramework.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,6 +107,7 @@
 				TargetAttributes = {
 					CBD9ABAF2222E128002587FE = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -130,6 +143,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBD9ABBE2222E1BB002587FE /* MyClass.swift in Sources */,
+				CBD9ABC22222E1CB002587FE /* ExampleClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +276,7 @@
 		CBD9ABB92222E128002587FE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -278,6 +294,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.sbertech.ConferenceFramework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "$(PROJECT_DIR)/ConferenceFramework";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -286,6 +304,7 @@
 		CBD9ABBA2222E128002587FE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -303,6 +322,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.sbertech.ConferenceFramework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "$(PROJECT_DIR)/ConferenceFramework";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

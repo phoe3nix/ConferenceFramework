@@ -1,0 +1,8 @@
+// second way import obj-c code to swift
+module ConferenceApp {
+	requires blocks, objc, objc_arc
+	
+	explicit module Internal {
+		header "ExampleClass.h"
+	}
+}

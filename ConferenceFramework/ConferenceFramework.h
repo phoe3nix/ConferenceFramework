@@ -14,6 +14,8 @@ FOUNDATION_EXPORT double ConferenceFrameworkVersionNumber;
 //! Project version string for ConferenceFramework.
 FOUNDATION_EXPORT const unsigned char ConferenceFrameworkVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <ConferenceFramework/PublicHeader.h>
 
-
+/**
+ First way import obj-c code to swift
+ */
+#import <ConferenceFramework/ExampleClass.h>
